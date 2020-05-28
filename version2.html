@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>v1 - google network animation</title>
+	<title>v2 - google network animation</title>
 </head>
 <body>
     <style>
@@ -49,16 +49,18 @@
             text-decoration: underline;
         }
     </style>
+
     <div class="versions">
         <ul>
             <li>
-                <a href="./index.html" class="active">Version 1</a>
+                <a href="./index.html">Version 1</a>
             </li>
             <li>
-                <a href="./version2.html">Version 2</a>
+                <a href="./version2.html" class="active">Version 2</a>
             </li>
         </ul>
     </div>
+
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 520">
         <defs>
             <style>
@@ -2306,21 +2308,93 @@
                     <image width="255" height="179" transform="translate(535 241.98)"
                         xlink:href="data:image/png;base64,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" />
                 </g>
-                <path class="cls-8"
-                    d="M593.36,120.87v1.59l3.33,1.92a1.94,1.94,0,0,1-.76,1.57c-.49.28-1.24.45-2.57-.31a8,8,0,0,1-3.64-6.35c0-2.34,1.6-3.31,3.64-2.13a7.11,7.11,0,0,1,2.51,2.58l1-.55a10,10,0,0,0-3.49-3.64c-2.8-1.61-5.16-.35-5.16,2.86a11.4,11.4,0,0,0,5.16,8.82c1.52.87,2.66,1,3.55.41s1.21-1.84,1.21-3a5.63,5.63,0,0,0-.08-1Z" />
-                <path class="cls-9"
-                    d="M602.27,124.71c-1.81-1-3.29-.32-3.29,1.87a7.15,7.15,0,0,0,3.29,5.67c1.82,1.05,3.3.31,3.3-1.87A7.1,7.1,0,0,0,602.27,124.71Zm0,6a4.17,4.17,0,0,1-1.85-3.35c0-1.35.86-1.79,1.85-1.21a4.14,4.14,0,0,1,1.86,3.35C604.13,130.89,603.27,131.34,602.27,130.76Z" />
-                <path class="cls-8"
-                    d="M618.43,134.88l0,0a4.93,4.93,0,0,0-1.73-1.84c-1.64-.94-3.07-.13-3.07,2a7.07,7.07,0,0,0,3.07,5.54c.78.45,1.4.41,1.73.14l0,0v.53c0,1.44-.68,1.82-1.75,1.2a4.12,4.12,0,0,1-1.66-2.3l-1.26-.13a7,7,0,0,0,2.92,3.9c1.69,1,3.12.66,3.12-2.12V135l-1.37-.79Zm-1.66,4.25a4,4,0,0,1-1.75-3.29c0-1.33.76-1.85,1.75-1.27a4,4,0,0,1,1.75,3.31C618.53,139.2,617.75,139.7,616.77,139.13Z" />
-                <path class="cls-10"
-                    d="M609.62,129c-1.81-1.05-3.29-.32-3.29,1.86a7.13,7.13,0,0,0,3.29,5.67c1.82,1,3.3.31,3.3-1.86A7.07,7.07,0,0,0,609.62,129Zm0,6a4.19,4.19,0,0,1-1.85-3.36c0-1.35.86-1.78,1.85-1.21a4.13,4.13,0,0,1,1.85,3.35C611.47,135.14,610.62,135.58,609.62,135Z" />
-                <path class="cls-11" d="M620.93,131.62l1.41.82v11.4l-1.41-.82Z" />
-                <path class="cls-9"
-                    d="M626.72,144.88a3.68,3.68,0,0,1-1.59-2.06l4.39.45-.14-.51a7,7,0,0,0-2.81-4c-1.69-1-3.1-.27-3.1,2a7.06,7.06,0,0,0,3.25,5.65c1.51.86,2.38.31,2.74-.09l-1.12-1.5a1.17,1.17,0,0,1-1.62.1Zm-.1-4.69a2.8,2.8,0,0,1,1.25,1.54l-3-.3C624.9,139.85,625.88,139.75,626.62,140.19Z" />
+                <path fill = "#bfcaec" d="M593.36,120.87v1.59l3.33,1.92a1.94,1.94,0,0,1-.76,1.57c-.49.28-1.24.45-2.57-.31a8,8,0,0,1-3.64-6.35c0-2.34,1.6-3.31,3.64-2.13a7.11,7.11,0,0,1,2.51,2.58l1-.55a10,10,0,0,0-3.49-3.64c-2.8-1.61-5.16-.35-5.16,2.86a11.4,11.4,0,0,0,5.16,8.82c1.52.87,2.66,1,3.55.41s1.21-1.84,1.21-3a5.63,5.63,0,0,0-.08-1Z">
+                	<set 
+						attributeName = "fill"
+						to = "#4285f4"
+						begin = "completeBarPower.end + 0s"
+						fill = "freeze"
+						restart = "never"
+                	/>
+                </path>
+
+                <path fill = "#bfcaec" d="M602.27,124.71c-1.81-1-3.29-.32-3.29,1.87a7.15,7.15,0,0,0,3.29,5.67c1.82,1.05,3.3.31,3.3-1.87A7.1,7.1,0,0,0,602.27,124.71Zm0,6a4.17,4.17,0,0,1-1.85-3.35c0-1.35.86-1.79,1.85-1.21a4.14,4.14,0,0,1,1.86,3.35C604.13,130.89,603.27,131.34,602.27,130.76Z">
+                	<set 
+						attributeName = "fill"
+						to = "#ea4335"
+						begin = "completeBarPower.end + 2s"
+						fill = "freeze"
+						restart = "never"
+                	/>
+                </path>
+
+                <path fill = "#bfcaec"  d="M618.43,134.88l0,0a4.93,4.93,0,0,0-1.73-1.84c-1.64-.94-3.07-.13-3.07,2a7.07,7.07,0,0,0,3.07,5.54c.78.45,1.4.41,1.73.14l0,0v.53c0,1.44-.68,1.82-1.75,1.2a4.12,4.12,0,0,1-1.66-2.3l-1.26-.13a7,7,0,0,0,2.92,3.9c1.69,1,3.12.66,3.12-2.12V135l-1.37-.79Zm-1.66,4.25a4,4,0,0,1-1.75-3.29c0-1.33.76-1.85,1.75-1.27a4,4,0,0,1,1.75,3.31C618.53,139.2,617.75,139.7,616.77,139.13Z">
+                	<set 
+						attributeName = "fill"
+						to = "#4285f4"
+						begin = "completeBarPower.end + 1s"
+						fill = "freeze"
+						restart = "never"
+                	/>
+                </path>
+
+                <path fill = "#bfcaec" d="M609.62,129c-1.81-1.05-3.29-.32-3.29,1.86a7.13,7.13,0,0,0,3.29,5.67c1.82,1,3.3.31,3.3-1.86A7.07,7.07,0,0,0,609.62,129Zm0,6a4.19,4.19,0,0,1-1.85-3.36c0-1.35.86-1.78,1.85-1.21a4.13,4.13,0,0,1,1.85,3.35C611.47,135.14,610.62,135.58,609.62,135Z">
+                	<set 
+						attributeName = "fill"
+						to = "#fbbc05"
+						begin = "completeBarPower.end + 2s"
+						fill = "freeze"
+						restart = "never"
+                	/>
+                </path>
+                
+                <path fill = "#bfcaec" d="M620.93,131.62l1.41.82v11.4l-1.41-.82Z">
+                	<set 
+						attributeName = "fill"
+						to = "#34a853"
+						begin = "completeBarPower.end + 0s"
+						fill = "freeze"
+						restart = "never"
+                	/>
+                </path>
+                <path fill = "#bfcaec" d="M626.72,144.88a3.68,3.68,0,0,1-1.59-2.06l4.39.45-.14-.51a7,7,0,0,0-2.81-4c-1.69-1-3.1-.27-3.1,2a7.06,7.06,0,0,0,3.25,5.65c1.51.86,2.38.31,2.74-.09l-1.12-1.5a1.17,1.17,0,0,1-1.62.1Zm-.1-4.69a2.8,2.8,0,0,1,1.25,1.54l-3-.3C624.9,139.85,625.88,139.75,626.62,140.19Z">
+                	<set 
+						attributeName = "fill"
+						to = "#ea4335"
+						begin = "completeBarPower.end + 1s"
+						fill = "freeze"
+						restart = "never"
+                	/>
+                </path>
                 <polygon class="cls-12" points="702.77 190.23 631.92 149.33 631.92 141.35 702.77 182.25 702.77 190.23" />
                 <polygon class="cls-13" points="721.08 200.81 707.55 192.99 707.55 185.01 721.08 192.82 721.08 200.81" />
-                <polygon class="cls-14" points="606.47 147.93 592.94 140.12 592.94 135.06 606.47 142.88 606.47 147.93" />
-                <polygon class="cls-14" points="606.47 151.84 592.94 144.03 592.94 142.94 606.47 150.75 606.47 151.84" />
+                <polygon fill = "#bfcaec" points="721.08 200.81 707.55 192.99 707.55 185.01 721.08 192.82 721.08 200.81">
+                	<set 
+						attributeName = "fill"
+						to = "transparent"
+						begin = "completeBarPower.end + 1s"
+						fill = "freeze"
+						restart = "never"
+                	/>
+                </polygon>
+                <polygon fill = "#bfcaec" points="606.47 147.93 592.94 140.12 592.94 135.06 606.47 142.88 606.47 147.93">
+                	<set 
+						attributeName = "fill"
+						to = "#fc6972"
+						begin = "completeBarPower.end + 3s"
+						fill = "freeze"
+						restart = "never"
+                	/>
+                </polygon>
+                <polygon fill = "#bfcaec" points="606.47 151.84 592.94 144.03 592.94 142.94 606.47 150.75 606.47 151.84">
+                	<set 
+						attributeName = "fill"
+						to = "#fc6972"
+						begin = "completeBarPower.end + 2s"
+						fill = "freeze"
+						restart = "never"
+                	/>
+                </polygon>
                 <polygon class="cls-15" points="624.78 158.51 611.25 150.69 611.25 145.64 624.78 153.45 624.78 158.51" />
                 <polygon class="cls-15" points="643.1 169.08 629.57 161.27 629.57 156.21 643.1 164.02 643.1 169.08" />
                 <polygon class="cls-15" points="661.41 179.65 647.88 171.84 647.88 166.78 661.41 174.59 661.41 179.65" />
@@ -2340,6 +2414,8 @@
 						end = "completeBarPower.end + 2s"
 						fill = "freeze"
 						id = "bar1-load1"
+						restart = "never"
+
 			        />
 			        <animate 
 						attributeName = "points"
@@ -2353,7 +2429,7 @@
 			        <animate 
 						attributeName = "points"
 						to = "667.85 202.63 599.38 163.11 599.38 156.12 667.85 195.65 667.85 202.63"
-						begin = "bar1-load2.end + 8s"
+						begin = "bar1-load2.end + 11s"
 						dur = "2s"
 						fill = "freeze"
 			        />
@@ -2371,6 +2447,7 @@
 						end = "completeBarPower.end + 2s"
 						fill = "freeze"
 						id = "bar2-load1"
+						restart = "never"
 			        />
 			        <animate 
 						attributeName = "points"
@@ -2401,6 +2478,7 @@
                 <polygon class="cls-12" points="698.85 309.48 599.38 252.06 599.38 246.96 698.85 304.38 698.85 309.48" />
                 <polygon class="cls-12" points="698.85 316.89 599.38 259.47 599.38 254.37 698.85 311.8 698.85 316.89" />
                 <!-- top arrows -->
+
                 <g style = "transform-origin: center;">
 
 					<animateTransform 
@@ -2421,6 +2499,7 @@
 			                      0.42 0 1 1;
 			                      0 0 0.59 1;
 			                      "
+			          restart = "never"
 				      />
 	                <path class="cls-18" d="M583.08,253.44l-3.8-8.66c-.22-.5-.7-.77-.92-.53l-3.81,4.26c-.24.28,0,1,.46,1.26l1.83,1v6.65a1.79,1.79,0,0,0,.8,1.39l2.35,1.35c.45.26.81.05.81-.46v-6.64l1.82,1C583.07,254.42,583.33,254,583.08,253.44Z" />
 	                <path class="cls-19" d="M578.72,256.23l-3.8-8.66c-.22-.5-.7-.77-.92-.53l-2.71,1.54s-1.08,3.72-.64,4l1.83,1.05v6.65a1.79,1.79,0,0,0,.8,1.39l.2,3s2.64-1.45,2.79-1.59a.58.58,0,0,0,.17-.47V258.2l-.55.35,2.78-1.56C578.83,256.88,578.88,256.58,578.72,256.23Z" />
@@ -2445,6 +2524,8 @@
 				      id = "jjtrr"
 				      keyTimes="0; 1"
 			          keySplines="0.42 0 1 1;"
+			          restart = "whenNotActive"
+
 			    	/>
 			    	<animateTransform 
 				      attributeName="transform" 
@@ -2476,11 +2557,11 @@
                 <g class="cls-33" style = "opacity: 0.3">
 					<animate 
 						attributeName = "opacity"
-						from = "0.3"
 						to = "1"
-						begin = "completeBarPower.end - 3s"
+						begin = "completeBarPower.end - 1s"
 						dur = "1s"
 						fill = "freeze"
+						restart = "never"
 					/>
                     <path class="cls-34" d="M847.26,223.63c0,3.13-.08,6.25-.24,9.38a183,183,0,1,1,.24-9.38Z" />
                     <circle class="cls-35" cx="665.79" cy="223.63" r="179.05" />
@@ -3072,6 +3153,8 @@
                 	/>
                 </mask>	
 
+
+				<!-- barr power -->
                 <g style = "stroke-dasharray: 400; stroke-dashoffset: 400;">
                 	<animate 
 						attributeName = "opacity"
@@ -3087,8 +3170,8 @@
 						attributeName = "stroke-dashoffset"
 						from = "400"
 						to = "340"
-						begin = "centerPower5.end"
-						dur = "1s"
+						begin = "centerPower5.end; endBarPowerEnter.end + 5s"
+						dur = ".3s"
 						fill = "freeze"
 						id = "load-fase1"
 					    keyTimes="0; 1"
@@ -3096,10 +3179,9 @@
                 	/>
                 	<animate
 						attributeName = "stroke-dashoffset"
-						from = "340"
 						to = "270"
-						begin = "fase1.end + 1s"
-						dur = "1s"
+						begin = "load-fase1.end + 0s"
+						dur = ".3s"
 						fill = "freeze"
 						id = "load-fase2"
 					    keyTimes="0; 1"
@@ -3107,10 +3189,9 @@
                 	/>
                 	<animate
 						attributeName = "stroke-dashoffset"
-						from = "270"
 						to = "210"
-						begin = "fase2.end + 1s"
-						dur = "1s"
+						begin = "load-fase2.end + 0s"
+						dur = ".3s"
 						fill = "freeze"
 						id = "load-fase3"
 					    keyTimes="0; 1"
@@ -3118,10 +3199,9 @@
                 	/>
                 	<animate
 						attributeName = "stroke-dashoffset"
-						from = "210"
 						to = "120"
-						begin = "fase3.end + 1s"
-						dur = "1s"
+						begin = "load-fase3.end + 0s"
+						dur = ".3s"
 						fill = "freeze"
 						id = "load-fase4"
 					    keyTimes="0; 1"
@@ -3129,12 +3209,63 @@
                 	/>
                 	<animate
 						attributeName = "stroke-dashoffset"
-						from = "120"
 						to = "0"
-						begin = "fase4.end + 1s"
-						dur = "1s"
+						begin = "load-fase4.end + 0s"
+						dur = ".3s"
 						fill = "freeze"
 						id = "load-fase5"
+					    keyTimes="0; 1"
+					    keySplines="0.7 0 0.84 0;"
+                	/>
+
+                	<!-- back -->
+                	<animate
+						attributeName = "stroke-dashoffset"
+						to = "-70"
+						begin = "completeBarPower.end + 3s"
+						dur = ".3s"
+						fill = "freeze"
+						id = "back-fase1"
+					    keyTimes="0; 1"
+					    keySplines="0.7 0 0.84 0;"
+                	/>
+                	<animate
+						attributeName = "stroke-dashoffset"
+						to = "-130"
+						begin = "back-fase1.end + 0s"
+						dur = ".3s"
+						fill = "freeze"
+						id = "back-fase2"
+					    keyTimes="0; 1"
+					    keySplines="0.7 0 0.84 0;"
+                	/>
+                	<animate
+						attributeName = "stroke-dashoffset"
+						to = "-190"
+						begin = "back-fase2.end + 0s"
+						dur = ".3s"
+						fill = "freeze"
+						id = "back-fase3"
+					    keyTimes="0; 1"
+					    keySplines="0.7 0 0.84 0;"
+                	/>
+                	<animate
+						attributeName = "stroke-dashoffset"
+						to = "-280"
+						begin = "back-fase3.end + 0s"
+						dur = ".3s"
+						fill = "freeze"
+						id = "back-fase4"
+					    keyTimes="0; 1"
+					    keySplines="0.7 0 0.84 0;"
+                	/>
+                	<animate
+						attributeName = "stroke-dashoffset"
+						to = "-400"
+						begin = "back-fase4.end + 0s"
+						dur = ".3s"
+						fill = "freeze"
+						id = "endBarPowerEnter"
 					    keyTimes="0; 1"
 					    keySplines="0.7 0 0.84 0;"
                 	/>
@@ -3147,6 +3278,7 @@
 	                </mask>
                 </g>
 
+				<!-- center power -->
 				<g style = "transform-origin: 222.57px 151.8px;">
 					<animateTransform 
 				      attributeName="transform" 
@@ -3218,37 +3350,40 @@
 	                </circle>
 				</g>
 
-                <path class="cls-320" style = "opacity: 0;" d="M546.49,176.69a13.72,13.72,0,0,0-4.77-10.41c-2.41-2.08-33.7-18.56-33.7-18.56l-11,10.21s23.84,26.6,26.73,29.12a13.75,13.75,0,0,0,22.79-10.36Z">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "0.51"
-						begin = "completeBarPower.begin"
-						dur = ".3s"
-						fill = "freeze"
-                	/>
-                </path>
+                
 
                 <g style = "transform-origin: 532.74px 176.69px">
-                	<animateTransform 
-				      attributeName="transform" 
-				      attributeType="XML"
-				      type="scale"
-				      from="1"
-				      to="0.8" 
-				      dur="3s"
-				      repeatCount = "indefinite"
-				      begin="completeBarPower.end + 3s"
-				      fill="freeze"
-				      keyTimes="0; 1"
-			          keySplines="0.42 0 1 1;"
-			    	/>
+                	<animate 
+	                	attributeName = "opacity"
+	                	to = "0"
+	                	begin = "endBarPowerEnter.end + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
+                	/>
+                	<animate 
+	                	attributeName = "opacity"
+	                	to = "1"
+	                	begin = "load-fase5.begin + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
+                	/>
+
+	                <path class="cls-320" style = "opacity: 0;" d="M546.49,176.69a13.72,13.72,0,0,0-4.77-10.41c-2.41-2.08-33.7-18.56-33.7-18.56l-11,10.21s23.84,26.6,26.73,29.12a13.75,13.75,0,0,0,22.79-10.36Z">
+	                	<animate 
+							attributeName = "opacity"
+							from = "0"
+							to = "0.51"
+							begin = "completeBarPower.begin"
+							dur = ".3s"
+							fill = "freeze"
+	                	/>
+	                </path>
 	                <circle class="cls-319" style = "opacity: 0;" cx="532.74" cy="176.69" r="13.75">
 	                	<animate 
 							attributeName = "opacity"
 							from = "0"
 							to = "0.3"
-							begin = "load-fase5.end + 2s"
+							begin = "load-fase5.begin + 1s"
 							dur = ".3s"
 							fill = "freeze"
 							id = "completeBarPower"
@@ -3259,7 +3394,7 @@
 							attributeName = "opacity"
 							from = "0"
 							to = "0.42"
-							begin = "load-fase5.end + 1.5s"
+							begin = "load-fase5.begin + 0.8s"
 							dur = ".3s"
 							fill = "freeze"
 	                	/>
@@ -3269,7 +3404,7 @@
 							attributeName = "opacity"
 							from = "0"
 							to = "1"
-							begin = "load-fase5.end + 1s"
+							begin = "load-fase5.begin + 0.6s"
 							dur = ".3s"
 							fill = "freeze"
 	                	/>
@@ -3279,7 +3414,7 @@
 							attributeName = "opacity"
 							from = "0"
 							to = "1"
-							begin = "load-fase5.end + .5s"
+							begin = "load-fase5.begin + 0.4s"
 							dur = ".3s"
 							fill = "freeze"
 	                	/>
@@ -3289,238 +3424,114 @@
 							attributeName = "opacity"
 							from = "0"
 							to = "1"
-							begin = "load-fase5.end + 0s"
+							begin = "load-fase5.begin + 0s"
 							dur = ".3s"
 							fill = "freeze"
 	                	/>
 	                </circle>
 				</g>
 
-				<g style = "transform-origin: 473.12px 130.55px">
-					<animateTransform 
-				      attributeName="transform" 
-				      attributeType="XML"
-				      type="scale"
-				      from="1"
-				      to="1.4" 
-				      dur="2s"
-				      repeatCount = "indefinite"
-				      begin="completeBarPower.end + 4.5s"
-				      fill="freeze"
-				      keyTimes="0; 1"
-			          keySplines="0.42 0 1 1;"
-			    	/>
-                <path class="cls-323" style = "opacity: 0;" d="M478.93,130.55a5.79,5.79,0,0,0-1.94-4.34c-1-.92-25.68-12.08-25.68-12.08l-3.53,3.93s20.45,16.11,21.88,17.17a5.81,5.81,0,0,0,9.27-4.68Z">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "fase4.begin"
-						dur = ".3s"
-						fill = "freeze"
+				<g style = "transform-origin: 473.12px 130.55px; opacity: 0;">
+					<animate 
+	                	attributeName = "opacity"
+	                	to = "0"
+	                	begin = "back-fase4.end + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
                 	/>
+                	<animate 
+	                	attributeName = "opacity"
+	                	to = "1"
+	                	begin = "load-fase4.end + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
+                	/>
+                <path class="cls-323" d="M478.93,130.55a5.79,5.79,0,0,0-1.94-4.34c-1-.92-25.68-12.08-25.68-12.08l-3.53,3.93s20.45,16.11,21.88,17.17a5.81,5.81,0,0,0,9.27-4.68Z">
                 </path>
-                <circle class="cls-324" style = "opacity: 0;" cx="473.12" cy="130.55" r="4.67">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase4.end + 1s"
-						dur = ".3s"
-						fill = "freeze"
-						id = "fase4"
-                	/>
+                <circle class="cls-324" cx="473.12" cy="130.55" r="4.67">
                 </circle>
-                <circle class="cls-247" style = "opacity: 0;" cx="473.12" cy="130.55" r="3.31">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase4.end + .5s"
-						dur = ".3s"
-						fill = "freeze"
-                	/>
+                <circle class="cls-247" cx="473.12" cy="130.55" r="3.31">
                 </circle>
-                <circle class="cls-325" style = "opacity: 0;" cx="473.12" cy="130.55" r="2.34">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase4.end + 0s"
-						dur = ".3s"
-						fill = "freeze"
-                	/>
+                <circle class="cls-325" cx="473.12" cy="130.55" r="2.34">
                 </circle>
 				</g>
 
-                <g style = "transform-origin: 396.69px 95.29px">
-                	<animateTransform 
-				      attributeName="transform" 
-				      attributeType="XML"
-				      type="scale"
-				      from="1"
-				      to="1.4" 
-				      dur="2s"
-				      repeatCount = "indefinite"
-				      begin="completeBarPower.end + 4s"
-				      fill="freeze"
-				      keyTimes="0; 1"
-			          keySplines="0.42 0 1 1;"
-			    	/>
-                <path class="cls-326" style = "opacity: 0;" d="M402.19,93.39a5.83,5.83,0,0,0-3.26-3.47c-1.27-.53-28.22-3-28.22-3l-2,4.87s24.59,8.55,26.28,9.08a5.82,5.82,0,0,0,7.25-7.45Z">
+                <g style = "transform-origin: 396.69px 95.29px; opacity: 0;">
                 	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "0.51"
-						begin = "fase3.begin"
-						dur = ".3s"
-						fill = "freeze"
+	                	attributeName = "opacity"
+	                	to = "0"
+	                	begin = "back-fase3.end + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
                 	/>
+                	<animate 
+	                	attributeName = "opacity"
+	                	to = "1"
+	                	begin = "load-fase3.end + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
+                	/>
+                <path class="cls-326" d="M402.19,93.39a5.83,5.83,0,0,0-3.26-3.47c-1.27-.53-28.22-3-28.22-3l-2,4.87s24.59,8.55,26.28,9.08a5.82,5.82,0,0,0,7.25-7.45Z">
                 </path>
-                <circle class="cls-327" style = "opacity: 0;" cx="396.69" cy="95.29" r="4.67">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase3.end + 1s"
-						dur = ".3s"
-						fill = "freeze"
-						id = "fase3"
-                	/>
+                <circle class="cls-327" cx="396.69" cy="95.29" r="4.67">
                 </circle>
-                <circle class="cls-247" style = "opacity: 0;" cx="396.69" cy="95.29" r="3.31">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase3.end + .5s"
-						dur = ".3s"
-						fill = "freeze"
-                	/>
+                <circle class="cls-247" cx="396.69" cy="95.29" r="3.31">
                 </circle>
-                <circle class="cls-325" style = "opacity: 0;" cx="396.69" cy="95.29" r="2.34">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase3.end + 0s"
-						dur = ".3s"
-						fill = "freeze"
-                	/>
+                <circle class="cls-325" cx="396.69" cy="95.29" r="2.34">
                 </circle>
 				</g>
 
-                <g style = "transform-origin: 332.19px 91.42px">
-                	<animateTransform 
-				      attributeName="transform" 
-				      attributeType="XML"
-				      type="scale"
-				      from="1"
-				      to="1.4" 
-				      dur="2s"
-				      repeatCount = "indefinite"
-				      begin="completeBarPower.end + 3.5s"
-				      fill="freeze"
-				      keyTimes="0; 1"
-			          keySplines="0.42 0 1 1;"
-			    	/>
-                <path class="cls-328" style = "opacity: 0;"d="M336.33,87.34a5.79,5.79,0,0,0-4.43-1.73c-1.38.07-26.77,9.41-26.77,9.41l.24,5.28s25.87-2.87,27.63-3.12a5.81,5.81,0,0,0,3.33-9.84Z">
+                <g style = "transform-origin: 332.19px 91.42px; opacity: 0;">
                 	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "0.51"
-						begin = "fase2.begin"
-						dur = ".3s"
-						fill = "freeze"
+	                	attributeName = "opacity"
+	                	to = "0"
+	                	begin = "back-fase2.end + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
                 	/>
+                	<animate 
+	                	attributeName = "opacity"
+	                	to = "1"
+	                	begin = "load-fase2.end + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
+                	/>
+                <path class="cls-328" d="M336.33,87.34a5.79,5.79,0,0,0-4.43-1.73c-1.38.07-26.77,9.41-26.77,9.41l.24,5.28s25.87-2.87,27.63-3.12a5.81,5.81,0,0,0,3.33-9.84Z">
+
                 </path>
-                <circle class="cls-329" style = "opacity: 0;" cx="332.19" cy="91.42" r="4.67">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase2.end + 1s"
-						dur = ".3s"
-						fill = "freeze"
-						id = "fase2"
-                	/>
+                <circle class="cls-329"  cx="332.19" cy="91.42" r="4.67">
+
                 </circle>
-                <circle class="cls-247" style = "opacity: 0;" cx="332.19" cy="91.42" r="3.31">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase2.end + .5s"
-						dur = ".3s"
-						fill = "freeze"
-                	/>
+                <circle class="cls-247"  cx="332.19" cy="91.42" r="3.31">
+
                 </circle>
-                <circle class="cls-325" style = "opacity: 0;" cx="332.19" cy="91.42" r="2.34">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase2.end + 0s"
-						dur = ".3s"
-						fill = "freeze"
-                	/>
+                <circle class="cls-325"  cx="332.19" cy="91.42" r="2.34">
+
                 </circle>
 				</g>
 
-                <g style = "transform-origin: 272.23px 111.32px">
-                	<animateTransform 
-				      attributeName="transform" 
-				      attributeType="XML"
-				      type="scale"
-				      from="1"
-				      to="1.4" 
-				      dur="2s"
-				      repeatCount = "indefinite"
-				      begin="completeBarPower.end + 3s"
-				      fill="freeze"
-				      keyTimes="0; 1"
-			          keySplines="0.42 0 1 1;"
-			    	/>
-                <path class="cls-330" style = "opacity: 0;" d="M274.94,106.17a5.82,5.82,0,0,0-4.75-.3c-1.29.48-22.66,17.07-22.66,17.07l1.83,5s23.78-10.57,25.39-11.34a5.82,5.82,0,0,0,.19-10.39Z">
-                    <animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "0.51"
-						begin = "fase1.begin"
-						dur = ".3s"
-						fill = "freeze"
+                <g style = "transform-origin: 272.23px 111.32px; opacity: 0">
+                	<animate 
+	                	attributeName = "opacity"
+	                	to = "0"
+	                	begin = "back-fase1.end + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
                 	/>
+                	<animate 
+	                	attributeName = "opacity"
+	                	to = "1"
+	                	begin = "load-fase1.end + 0s"
+	                	dur = "0.1s"
+	                	fill = "freeze"
+                	/>
+                <path class="cls-330"  d="M274.94,106.17a5.82,5.82,0,0,0-4.75-.3c-1.29.48-22.66,17.07-22.66,17.07l1.83,5s23.78-10.57,25.39-11.34a5.82,5.82,0,0,0,.19-10.39Z">
                 </path>
-                <circle class="cls-331" style = "opacity: 0;" cx="272.23" cy="111.32" r="4.67">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase1.end + 1s"
-						dur = ".3s"
-						fill = "freeze"
-						id = "fase1"
-                	/>
+                <circle class="cls-331"  cx="272.23" cy="111.32" r="4.67">
                 </circle>
-                <circle class="cls-247" style = "opacity: 0;" cx="272.23" cy="111.32" r="3.31">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase1.end + .5s"
-						dur = ".3s"
-						fill = "freeze"
-                	/>
+                <circle class="cls-247"  cx="272.23" cy="111.32" r="3.31">
                 </circle>
-                <circle class="cls-325" style = "opacity: 0;" cx="272.23" cy="111.32" r="2.34">
-                	<animate 
-						attributeName = "opacity"
-						from = "0"
-						to = "1"
-						begin = "load-fase1.end + 0s"
-						dur = ".3s"
-						fill = "freeze"
-                	/>
+                <circle class="cls-325"  cx="272.23" cy="111.32" r="2.34">
                 </circle>
                 </g>
             </g>
